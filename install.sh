@@ -7,10 +7,14 @@ catkin_make
 source devel/setup.bash
 cd src
 git clone https://github.com/CopterExpress/clever.git
+git clone https://github.com/CopterExpress/ros_led.git
 
 # Patching
 
 cd clever
+
+rm -rf clover_simulation/
+
 cd clover 
 
 ../../../../patch_clever.sh
@@ -38,11 +42,11 @@ git submodule update --init --recursive
 # echo aaa $(pwd)
 cd ./Tools/sitl_gazebo/include
 # echo aaa $(pwd)
-patch < ../../../patches/gazebo_opticalflow_plugin.patch
+patch < ../../../../patches/gazebo_opticalflow_plugin.patch
 # echo aaa $(pwd)
 cd ../../../
 DONT_RUN=1 make px4_sitl_default gazebo
-echo aaa $(pwd)
+
 cp -fRa ../models/iris ./Tools/sitl_gazebo/models
 cp -fRa ../models/aruco_map_10_10 ./Tools/sitl_gazebo/models
 cp -f ../worlds/empty.world ./Tools/sitl_gazebo/worlds
