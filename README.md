@@ -5,6 +5,7 @@
 ```
 ### Установка 
 ```bash
+./install_melodic.sh
 ./install_dep.sh
 ./install.sh
 ```
@@ -14,6 +15,4 @@
 source env.sh
 roslaunch run.launch 
 ```
-
-
 
