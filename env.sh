@@ -7,5 +7,3 @@ export GAZEBO_MODEL_PATH=$(pwd)/models:$GAZEBO_MODEL_PATH
 #export GAZEBO_MODEL_PATH=$(pwd)/Firmware/Tools/sitl_gazebo/models:$GAZEBO_MODEL_PATH
 
 #roslaunch ./run.launch
-
-ipython
