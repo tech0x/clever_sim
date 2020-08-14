@@ -1,4 +1,7 @@
 #!/bin/bash
+
+source /opt/ros/melodic/setup.bash
+
 ### CLEVER
 mkdir -p catkin_ws/src
 cd catkin_ws/src
@@ -32,7 +35,6 @@ source devel/setup.bash
 ### END
 
 cd ../
-
 
 ### PX4
 git clone https://github.com/CopterExpress/Firmware.git
